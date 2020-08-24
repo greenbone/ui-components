@@ -1,32 +1,34 @@
-version: 2
-jobs:
-  js_test:
-    working_directory: ~/
+version: 2.1
+
+executors:
+  node14:
     docker:
       - image: circleci/node:14
         environment:
           ENV: CI
+    working_directory: ~/
+
+commands:
+  js_test:
+    description: "Checkout and run JavaScript tests"
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
+      - run: npm install
       - run:
           working_directory: ~/
           name: Run JavaScript tests
           command: npm run test
           environment:
             JEST_JUNIT_OUTPUT_DIR: "./reports"
-    #  - run:
-     #     working_directory: ~/gsa/gsa
-      #    name: Submit test coverage to codecov.io
-       #   command: bash <(curl -s https://codecov.io/bash)
-      #- store_test_results:
-      #    path: ~/gsa/gsa/reports
-      #- store_artifacts:
-      #    path: ~/gsa/gsa/reports
+
+jobs:
+  test-14:
+    executor: node14
+    steps:
+      - js_test
+
 workflows:
   version: 2
   build_and_test:
     jobs:
-      - js_test
+      - test-14
