@@ -3,12 +3,11 @@
 
 The Greenbone UI-Components are developed for the [Greenbone Security Assistant](https://github.com/greenbone/gsa).
 
-##Usage 
+## Usage
 
 `npm install @greenbone/ui-components`
 
-
-##Installation
+## Installation
 
 Use `npm i` to install the dependencies.
 
