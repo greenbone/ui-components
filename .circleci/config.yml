@@ -23,7 +23,7 @@ commands:
       - run:
           working_directory: ~/ui-components
           name: Run JavaScript tests
-          command: npm run test
+          command: npm run test-ci
           environment:
             JEST_JUNIT_OUTPUT_DIR: "./reports"
 
