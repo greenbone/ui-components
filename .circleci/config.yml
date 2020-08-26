@@ -6,13 +6,13 @@ executors:
       - image: circleci/node:14
         environment:
           ENV: CI
-    working_directory: ~/
+    working_directory: ~/ui-components
   node10:
     docker:
       - image: circleci/node:10
         environment:
           ENV: CI
-    working_directory: ~/
+    working_directory: ~/ui-components
 
 commands:
   js_test:
@@ -21,7 +21,7 @@ commands:
       - checkout
       - run: npm install
       - run:
-          working_directory: ~/
+          working_directory: ~/ui-components
           name: Run JavaScript tests
           command: npm run test
           environment:
