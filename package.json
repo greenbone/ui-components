@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": "https://github.com/greenbone/ui-components",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
+    "test-ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
@@ -26,6 +28,10 @@
     "react-dom": "^16.13.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "jest-junit": "^10.0.0",
+    "@babel/polyfill": "^7.10.4"
   }
 }
