@@ -4,6 +4,7 @@ import styled, {css} from "styled-components"
 import Checkmark from "./assets/check.svg"
 import Cross from "./assets/clear.svg"
 import PropTypes from "prop-types"
+import {ColorTheme} from "../Theme"
 
 
 const FormElement = styled.form`
@@ -30,7 +31,7 @@ const props = {
     isValid: PropTypes.any,
     label: PropTypes.string,
     onChange: PropTypes.func,
-    helperText: PropTypes.node,
+    helperText: PropTypes.node
 }
 
 const StyledFormControl = styled(FormControl)`
@@ -50,18 +51,16 @@ const StyledFormControl = styled(FormControl)`
 
 
 const StyledMaterialTextField = styled(MaterialTextField)`
-
-
-    input, label {
+      input, label {
       ${props => props.readonly && css`
-        color: ${props => props.theme.font.text};
+        color: ${props => props?.theme?.font?.text || ColorTheme.font.text};
       `}
     }
 
 
   .MuiInput-underline, .MuiFilledInput-underline {
     &:after{
-       border-color: ${props => props.theme.input.borderBottomColor};
+       border-color: ${props => props?.theme?.input?.borderBottomColor || ColorTheme.input.borderBottomColor};
     }
 
     &:hover {
@@ -69,13 +68,13 @@ const StyledMaterialTextField = styled(MaterialTextField)`
     }
 
     &:hover:not(:disabled):before{
-      border-color: ${props => props.theme.input.borderBottomColor};
+      border-color: ${props => props?.theme?.input?.borderBottomColor || ColorTheme.input.borderBottomColor};
     }
 
   }
 
   .MuiFormLabel-root.Mui-focused {
-    color: ${props => props.theme.input.label};
+    color: ${props => props?.theme?.input?.label || ColorTheme.input.label};
   }
 `
 
