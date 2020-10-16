@@ -39,12 +39,6 @@ const StyledFormControl = styled(FormControl)`
   flex-grow: 1;
   margin: 0;
   font-family: 'DroidSans', Arial, sans-serif;
-
-  /* All following elements with the same selector - https://developer.mozilla.org/de/docs/Web/CSS/Adjacent_sibling_selectors*/
-  & + & {
-    margin-left: 1.25rem;
-  }
-
   width: 100%;
   margin-bottom: 1rem;}
 `

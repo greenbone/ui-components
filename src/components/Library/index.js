@@ -1,3 +1,5 @@
 export {Flex, FlexColumn, FlexRow} from "./Flex"
 export {Input} from "./Input"
 export {ColorTheme, Theme} from "./Theme"
+export {Headline, Bold, Caption, Paragraph, Subheadline, Text, Tiny} from "./Font"
+export {Button} from "./Button"
