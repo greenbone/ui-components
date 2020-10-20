@@ -109,7 +109,6 @@ dist
 .npmrc
 junit.xml
 
-src
 .circleci
 .storybook
 

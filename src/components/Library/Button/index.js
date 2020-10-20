@@ -24,7 +24,6 @@ export const Button = (styled.button`
   border-radius: 3px;
   font-size: 1rem;
   font-weight: normal;
-  font-family: Netto, sans-serif;
   min-height: 2.25rem;
 
   margin: 0;
