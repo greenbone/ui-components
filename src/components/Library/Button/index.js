@@ -1,15 +1,16 @@
 import styled, {css} from "styled-components"
+import {ColorTheme} from "../Theme"
 
 
 const Types = {
     outline: css`
       background: transparent;
-      border: 1px solid ${props => props.theme.button.normal.background};
-      color: ${props => props.theme.button.normal.background};
+      border: 1px solid ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
+      color: ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
       &:hover {
         background: transparent;
-        border: 1px solid ${props => props.theme.button.normal.hover};
-        color: ${props => props.theme.button.normal.hover};
+        border: 1px solid ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
+        color: ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
       };
       font-weight: normal;                 
     `
@@ -17,8 +18,8 @@ const Types = {
 
 export const Button = (styled.button`
   box-sizing: border-box;
-  color: ${props => props.theme.button.normal.text};
-  background-color: ${props => props.theme.button.normal.background};
+  color: ${props => props?.theme?.button?.normal?.text || ColorTheme.button.normal.text};
+  background-color: ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal};
   border: none;
   border-radius: 3px;
   font-size: 1rem;
@@ -32,21 +33,21 @@ export const Button = (styled.button`
   
   &:hover{
     cursor: pointer;
-    background-color: ${props => props.theme.button.normal.hover};
+    background-color: ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
   }
   
   ${props => props.disabled && css`
-      background-color: ${props => props.theme.button.normal.disabled};
+      background-color: ${props => props?.theme?.button?.normal?.disabled || ColorTheme.button.normal.disabled};
 
     &:hover  {
       cursor: not-allowed;
-      background-color: ${props => props.theme.button.normal.disabled};
+      background-color: ${props => props?.theme?.button?.normal?.disabled || ColorTheme.button.normal.disabled};
     }
   `}
 
   ${props => props.loading && css`
     &:hover {
-      background-color: ${props => props.theme.button.normal.background};
+      background-color: ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
       cursor: wait;
     }
   `}
@@ -59,93 +60,34 @@ export const Button = (styled.button`
 
 `)
 
-export const ActionButton = styled(Button)`
-  margin: 0;
-`
 
 const GhostButtonVariants = {
     negative: css`
-       border: 1px solid ${props => props.theme.button.normal.background};
-       color: ${props => props.theme.button.normal.background};
+       border: 1px solid ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
+       color: ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
        &:hover {
          background: transparent;
-         border: 1px solid ${props => props.theme.button.normal.hover};
-         color: ${props => props.theme.button.normal.hover};
+         border: 1px solid ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
+         color: ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
        };
     `
 }
 
 export const GhostButton = styled(Button)`
   background: transparent;
-  border: 1px solid ${props => props.theme.button.normal.background};
-  color: ${props => props.theme.button.normal.background};
+  border: 1px solid ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
+  color: ${props => props?.theme?.button?.normal?.background || ColorTheme.button.normal.background};
   font-weight: normal;
   &:hover {
      background: transparent;
-     border: 1px solid ${props => props.theme.button.normal.hover};
-     color: ${props => props.theme.button.normal.hover};
+     border: 1px solid ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
+     color: ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
   };
 
    ${props => props.variant && GhostButtonVariants[props.variant]}
 `
 
 export const AbortButton = GhostButton
-
-/*
-export const AbortButton = styled(Button)`
-  background-color: ${props => props.theme.button.abort.background};
-
-  &:hover{
-    background-color: ${props => props.theme.button.abort.hover};
-  }
-
-  ${props => props.disabled && css`
-    background-color: ${props => props.theme.button.abort.disabled};
-
-    &:hover  {
-      background-color: ${props => props.theme.button.abort.disabled};
-    }
-  `}
-
-  ${props => props.loading && css`
-    &:hover {
-      cursor: wait;
-    }
-  `}
-`; */
-
-
-export const IconButton = styled.button`
-  border: none;
-  background: ${props => props.theme.button.icon.background};
-  box-sizing: border-box;
-  min-height: 2.35rem;
-  width: 2.35rem;
-  padding: 0.55rem;
-  border-radius: 3px;
-  transition:all 0.3s ease;
-
-  &:hover {
-    background: ${props => props.theme.button.icon.hover};
-    cursor: pointer;
-  }
-
-  &:active {
-    background: ${props => props.theme.button.icon.active};
-  }
-
-  ${props => props.disabled && css`
-    opacity: 0.5;
-    &:hover {
-        background: ${props => props.theme.button.icon.background};
-        cursor: default;
-    }
-  
-    &:active {
-        background: ${props => props.theme.button.icon.background};
-    }
-  `}
-`
 
 export const LinkButton = styled.button`
   background: none;

@@ -2,7 +2,8 @@
   "name": "@greenbone/components",
   "version": "2020.9.2",
   "description": "Greenbone Frontend Component Library",
-  "main": "build",
+  "main": "build/Library.js",
+  "types": "types/index.d.ts",
   "repository": "https://github.com/greenbone/ui-components",
   "publishConfig": {
     "registry": "http://192.168.170.180:5050/repository/npm-private/"
@@ -13,7 +14,8 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "build-storybook": "build-storybook -c .storybook -o storybook",
-    "storybook": "start-storybook -p 7000"
+    "storybook": "start-storybook -p 7000",
+    "create-types": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +32,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "typescript": "4.0.3",
     "core-js": "^3.6.5",
     "@types/jest": "^26.0.10",
     "@babel/polyfill": "^7.10.4",
