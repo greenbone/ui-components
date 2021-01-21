@@ -21,28 +21,30 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "peerDependencies": {
+    "@material-ui/core": "^4",
+    "bootstrap": "^4",
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",
-    "bootstrap": "^4",
-    "reactstrap": "^8",
-    "@material-ui/core": "^4"
+    "reactstrap": "^8"
   },
   "dependencies": {
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "typescript": "4.0.3",
-    "core-js": "^3.6.5",
-    "@types/jest": "^26.0.10",
+    "@babel/core": "^7.12.10",
     "@babel/polyfill": "^7.10.4",
+    "@material-ui/core": "^4.11.0",
     "@neutrinojs/jest": "^9.4.0",
     "@neutrinojs/react-components": "^9.4.0",
     "@storybook/addon-actions": "^6.0.20",
     "@storybook/react": "^6.0.20",
-    "@testing-library/react": "^10.4.9",
+    "@svgr/webpack": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^26.0.10",
     "bootstrap": "^4.5.2",
+    "core-js": "^3.6.5",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.3",
     "jest": "^26.4.2",
@@ -54,10 +56,9 @@
     "react-router": "^5.2.0",
     "reactstrap": "^8.5.1",
     "storybook-react-router": "^1.0.8",
+    "typescript": "4.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "@material-ui/core": "^4.11.0",
-    "@svgr/webpack": "^5.4.0"
+    "webpack-dev-server": "^3.11.0"
   }
 }
