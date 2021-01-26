@@ -34,8 +34,8 @@ commands:
       - run: yarn install
       - run:
           working_directory: ~/ui-components
-            name: Run build
-            command: yarn run build
+          name: Run build
+          command: yarn run build
 
 
 jobs:
