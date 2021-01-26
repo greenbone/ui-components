@@ -1,9 +1,9 @@
 import React from "react"
 import {render} from "react-dom"
-import Example from "./components/Library/Example"
-import {Input} from "./components/Library/Input"
+import Example from "./components/library/example"
+import {Input} from "./components/library/input"
 import {ThemeProvider} from "styled-components"
-import {ColorTheme} from "../Theme"
+import {ColorTheme} from "../theme"
 
 
 const App = (props) => (
