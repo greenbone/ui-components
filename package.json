@@ -29,7 +29,7 @@
     "reactstrap": "^8"
   },
   "dependencies": {
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
