@@ -1,6 +1,6 @@
 {
-  "name": "@greenbone/components",
-  "version": "2020.9.2",
+  "name": "@greenbone/ui-components",
+  "version": "2021.1.1",
   "description": "Greenbone Frontend Component Library",
   "main": "build/Library.js",
   "types": "types/index.d.ts",
