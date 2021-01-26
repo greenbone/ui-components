@@ -38,6 +38,20 @@ commands:
           command: yarn run build
 
 
+  publish:
+    description: "Publish to npm registry"
+    steps:
+      - checkout
+      - run: yarn install
+      - run:
+          working_directory: ~/ui-components
+          name: Run build
+          command: yarn run build
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/ui-components/.npmrc
+      - run: npm publish --non-interactive
+
 jobs:
   test-14:
     executor: node14
@@ -49,9 +63,23 @@ jobs:
     steps:
       - js_test
       - build
+
+  publish-14:
+    executor: node14
+    steps:
+      - publish
+
 workflows:
   version: 2
   build_and_test:
     jobs:
       - test-14
       - test-10
+  build_and_publish:
+    jobs:
+      - publish
+        filters:
+          branches:
+            only:
+              - master
+            ignore: /pull\/[0-9]+/
