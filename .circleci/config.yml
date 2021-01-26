@@ -19,23 +19,55 @@ commands:
     description: "Checkout and run JavaScript tests"
     steps:
       - checkout
-      - run: npm install
+      - run: yarn install
       - run:
           working_directory: ~/ui-components
           name: Run JavaScript tests
-          command: npm run test-ci
+          command: yarn run test-ci
           environment:
             JEST_JUNIT_OUTPUT_DIR: "./reports"
+
+  build:
+    description: "Build npm library"
+    steps:
+      - checkout
+      - run: yarn install
+      - run:
+          working_directory: ~/ui-components
+          name: Run build
+          command: yarn run build
+
+
+  publish:
+    description: "Publish to npm registry"
+    steps:
+      - checkout
+      - run: yarn install
+      - run:
+          working_directory: ~/ui-components
+          name: Run build
+          command: yarn run build
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/ui-components/.npmrc
+      - run: npm publish --non-interactive
 
 jobs:
   test-14:
     executor: node14
     steps:
       - js_test
+      - build
   test-10:
     executor: node10
     steps:
       - js_test
+      - build
+
+  publish-14:
+    executor: node14
+    steps:
+      - publish
 
 workflows:
   version: 2
@@ -43,3 +75,11 @@ workflows:
     jobs:
       - test-14
       - test-10
+  build_and_publish:
+    jobs:
+      - publish-14:
+          filters:
+            branches:
+              only:
+                - master
+              ignore: /pull\/[0-9]+/
