@@ -4,7 +4,7 @@ import styled, {css} from "styled-components"
 import Checkmark from "./assets/check.svg"
 import Cross from "./assets/clear.svg"
 import PropTypes from "prop-types"
-import {ColorTheme} from "../Theme"
+import {ColorTheme} from "../theme"
 
 
 const FormElement = styled.form`
@@ -202,5 +202,3 @@ export function Input(props) {
 Input.propTypes = {
     ...props
 }
-
-
