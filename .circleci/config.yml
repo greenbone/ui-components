@@ -50,7 +50,7 @@ commands:
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/ui-components/.npmrc
-      - run: npm publish --non-interactive
+      - run: npm publish --access public --non-interactive
 
 jobs:
   test-14:
