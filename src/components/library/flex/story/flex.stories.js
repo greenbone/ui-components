@@ -1,6 +1,6 @@
 import React from "react";
-import {DiceColumn} from "./diceColumn";
-import {DiceRow} from "./diceRow";
+import {DiceColumn} from "./dicecolumn";
+import {DiceRow} from "./dicerow";
 
 
 export default {title: "Flex"};

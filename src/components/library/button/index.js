@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components"
-import {ColorTheme} from "../Theme"
+import {ColorTheme} from "../theme"
 
 
 const Types = {
@@ -12,7 +12,7 @@ const Types = {
         border: 1px solid ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
         color: ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
       };
-      font-weight: normal;                 
+      font-weight: normal;
     `
 }
 
@@ -29,12 +29,12 @@ export const Button = (styled.button`
   margin: 0;
   padding-right: 1.25rem;
   padding-left: 1.25rem;
-  
+
   &:hover{
     cursor: pointer;
     background-color: ${props => props?.theme?.button?.normal?.hover || ColorTheme.button.normal.hover};
   }
-  
+
   ${props => props.disabled && css`
       background-color: ${props => props?.theme?.button?.normal?.disabled || ColorTheme.button.normal.disabled};
 
@@ -52,8 +52,8 @@ export const Button = (styled.button`
   `}
 
   ${props => props.type && Types[props.type]};
-  
-    & + & { 
+
+    & + & {
     margin-left: 1.25rem;
   }
 
@@ -93,11 +93,11 @@ export const LinkButton = styled.button`
   border: none;
   padding: 0;
   margin: 0;
-  
+
   &:hover {
     text-decoration: underline;
   }
-  
+
   ${props => props.disabled && css`
     color: lightgrey;
     cursor: default;
