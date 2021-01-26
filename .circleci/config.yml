@@ -43,11 +43,12 @@ jobs:
     executor: node14
     steps:
       - js_test
+      - build
   test-10:
     executor: node10
     steps:
       - js_test
-
+      - build
 workflows:
   version: 2
   build_and_test:
