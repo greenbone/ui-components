@@ -19,13 +19,24 @@ commands:
     description: "Checkout and run JavaScript tests"
     steps:
       - checkout
-      - run: npm install
+      - run: yarn install
       - run:
           working_directory: ~/ui-components
           name: Run JavaScript tests
-          command: npm run test-ci
+          command: yarn run test-ci
           environment:
             JEST_JUNIT_OUTPUT_DIR: "./reports"
+
+  build:
+    description: "Build npm library"
+    steps:
+      - checkout
+      - run: yarn install
+      - run:
+          working_directory: ~/ui-components
+            name: Run build
+            command: yarn run build
+
 
 jobs:
   test-14:
