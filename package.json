@@ -49,7 +49,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "jest": "^26.4.2",
     "jest-junit": "^12.0.0",
-    "neutrino": "^9.4.0",
+    "neutrino": "^9.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.13.1",
