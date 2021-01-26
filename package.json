@@ -5,9 +5,6 @@
   "main": "build/Library.js",
   "types": "types/index.d.ts",
   "repository": "https://github.com/greenbone/ui-components",
-  "publishConfig": {
-    "registry": "http://192.168.170.180:5050/repository/npm-private/"
-  },
   "scripts": {
     "test": "jest --watch",
     "test-ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
