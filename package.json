@@ -21,15 +21,15 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "peerDependencies": {
-    "@material-ui/core": "^4",
-    "bootstrap": "^4",
     "prop-types": "^15",
     "react": "^16",
-    "react-dom": "^16",
-    "reactstrap": "^8"
+    "react-dom": "^16"
   },
   "dependencies": {
-    "styled-components": "^5.2.1"
+    "styled-components": "^5",
+    "@material-ui/core": "^4",
+    "bootstrap": "^4",
+    "reactstrap": "^8"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -45,8 +45,6 @@
     "@types/jest": "^26.0.20",
     "bootstrap": "^4.6.0",
     "core-js": "^3.8.3",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "jest": "^26.4.2",
     "jest-junit": "^12.0.0",
     "neutrino": "^9.5.0",
