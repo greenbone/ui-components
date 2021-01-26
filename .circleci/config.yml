@@ -77,9 +77,9 @@ workflows:
       - test-10
   build_and_publish:
     jobs:
-      - publish
-        filters:
-          branches:
-            only:
-              - master
-            ignore: /pull\/[0-9]+/
+      - publish-14:
+          filters:
+            branches:
+              only:
+                - master
+              ignore: /pull\/[0-9]+/
