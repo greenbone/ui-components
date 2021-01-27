@@ -79,7 +79,7 @@ workflows:
     jobs:
       - publish-14:
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - master
-              ignore: /pull\/[0-9]+/
+              ignore: /.*/
