@@ -16,7 +16,7 @@ describe("Flex", () => {
             expect(container.querySelector("div")).toBeTruthy()
         })
 
-        it("passes children trough", () => {
+        it("passes children through", () => {
             expect(screen.getByText(childText)).toBeInTheDocument()
         })
     })
