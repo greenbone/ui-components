@@ -29,7 +29,7 @@
     "reactstrap": "^8"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.14.3",
     "@babel/polyfill": "^7.12.1",
     "@neutrinojs/jest": "^9.5.0",
     "@neutrinojs/react-components": "^9.5.0",
