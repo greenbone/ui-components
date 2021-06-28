@@ -33,7 +33,7 @@
     "@babel/polyfill": "^7.12.1",
     "@neutrinojs/jest": "^9.5.0",
     "@neutrinojs/react-components": "^9.5.0",
-    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-actions": "^6.3.0",
     "@storybook/react": "^6.2.9",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.14.1",
