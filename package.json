@@ -7,7 +7,8 @@
   "repository": "https://github.com/greenbone/ui-components",
   "scripts": {
     "test": "jest --watch",
-    "test-ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
+    "test:coverage": "jest --ci --coverage --reporters=default --reporters=jest-junit",
+    "lint": "eslint --max-warnings 0 src",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "build-storybook": "build-storybook -c .storybook -o storybook",
