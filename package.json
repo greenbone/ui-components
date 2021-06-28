@@ -7,7 +7,8 @@
   "repository": "https://github.com/greenbone/ui-components",
   "scripts": {
     "test": "jest --watch",
-    "test-ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
+    "test:coverage": "jest --ci --coverage --reporters=default --reporters=jest-junit",
+    "lint": "eslint --max-warnings 0 src",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "build-storybook": "build-storybook -c .storybook -o storybook",
@@ -23,10 +24,10 @@
     "react-dom": "^16"
   },
   "dependencies": {
-    "styled-components": "^5",
     "@material-ui/core": "^4",
     "bootstrap": "^4",
-    "reactstrap": "^8"
+    "reactstrap": "^8",
+    "styled-components": "^5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -40,6 +41,7 @@
     "@testing-library/react": "^11.2.7",
     "@types/jest": "^26.0.23",
     "core-js": "^3.15.0",
+    "eslint": "^7.29.0",
     "jest": "^26.6.3",
     "jest-junit": "^12.2.0",
     "neutrino": "^9.5.0",
