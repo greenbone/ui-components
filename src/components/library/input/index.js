@@ -23,30 +23,20 @@ const Icon = styled.img`
   height: 1.00rem;
 `
 
-const props = {
-    adornment: PropTypes.node,
-    type: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.any,
-    isValid: PropTypes.any,
-    label: PropTypes.string,
-    onChange: PropTypes.func,
-    helperText: PropTypes.node
-}
-
 const StyledFormControl = styled(FormControl)`
    & {display: flex;
-  flex-grow: 1;
-  margin: 0;
-  font-family: 'DroidSans', Arial, sans-serif;
-  width: 100%;
-  margin-bottom: 1rem;}
+      flex-grow: 1;
+      margin: 0;
+      font-family: 'DroidSans', Arial, sans-serif;
+      width: 100%;
+      margin-bottom: 1rem;
+   }
 `
 
 
 const StyledMaterialTextField = styled(MaterialTextField)`
       input, label {
-      ${props => props.readonly && css`
+      ${props => props.readOnly && css`
         color: ${props => props?.theme?.font?.text || ColorTheme.font.text};
       `}
     }
@@ -74,19 +64,19 @@ const StyledMaterialTextField = styled(MaterialTextField)`
 
 
 const InnerInput = (props) => {
-    let inputRef = React.createRef()
+    let internalInputRef = React.createRef()
 
-    const handleClear = event => {
-        if (inputRef) {
+    const handleClear = () => {
+        if (internalInputRef) {
             try {
-                let input = inputRef
-                let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set
+                const input = internalInputRef
+                const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set
                 nativeInputValueSetter.call(input, "")
 
-                let fireableEvent = new Event("input", {bubbles: true})
+                const fireableEvent = new Event("input", {bubbles: true})
                 input.dispatchEvent(fireableEvent)
             } catch (exception) {
-                //swallow error
+                // swallow error
             }
 
         }
@@ -118,9 +108,10 @@ const InnerInput = (props) => {
                     startAdornment: adornment,
                     style: {fontFamily: "'DroidSans', Arial, sans-serif"},
                     inputRef: (ref) => {
-                        if (props.inputRef)
+                        if (props.inputRef){
                             props.inputRef(ref)
-                        inputRef = ref
+                        }
+                        internalInputRef = ref
                     }
                 }}
             />
@@ -138,9 +129,10 @@ const InnerInput = (props) => {
                     style: {fontFamily: "'DroidSans', Arial, sans-serif"},
                     startAdornment: adornment,
                     inputRef: (ref) => {
-                        if (props.inputRef)
+                        if (props.inputRef){
                             props.inputRef(ref)
-                        inputRef = ref
+                        }
+                        internalInputRef = ref
                     }
                 }}
                 helperText={helperText}
@@ -181,9 +173,11 @@ const InnerInput = (props) => {
                 startAdornment: adornment,
                 style: {fontFamily: "'DroidSans', Arial, sans-serif"},
                 inputRef: (ref) => {
-                    if (props.inputRef)
+                    if (props.inputRef) {
                         props.inputRef(ref)
-                    inputRef = ref
+                    }
+                    internalInputRef = ref
+
                 }
             }}
         />
@@ -199,6 +193,28 @@ export function Input(props) {
     )
 }
 
+InnerInput.propTypes = {
+    adornment: PropTypes.node,
+    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.any,
+    isValid: PropTypes.any,
+    label: PropTypes.string,
+    onChange: PropTypes.func,
+    helperText: PropTypes.node,
+    inputRef: PropTypes.any,
+    readOnly: PropTypes.bool,
+    disabled: PropTypes.bool
+}
+
 Input.propTypes = {
-    ...props
+    adornment: PropTypes.node,
+    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.any,
+    isValid: PropTypes.any,
+    label: PropTypes.string,
+    onChange: PropTypes.func,
+    helperText: PropTypes.node,
+    inputRef: PropTypes.any
 }

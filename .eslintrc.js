@@ -115,7 +115,7 @@ module.exports = {
         // for arrow functions. it's causing warning for all react refs currently
         // https://github.com/eslint/eslint/issues/5150
         // 'no-return-assign': 'warn', // disallow assignment in return Statement
-        'no-shadow': 'warn', // disallow variable declarations from shadowing variables declared in the outer scope
+        'no-shadow':[ 'warn', {allow: ["props"]}], // disallow variable declarations from shadowing variables declared in the outer scope
         'no-shadow-restricted-names': 'error', // disallow shadowing of restricted names e.g. var undefined = 'foo';
         'no-undef-init': 'warn', // disallow initializing to undefined: var foo = undefined;
 
@@ -181,13 +181,6 @@ module.exports = {
             'warn',
             {
                 ignorePureComponents: true,
-            },
-        ],
-        'react/sort-prop-types': [
-            // warn if proptypes are not sorted
-            'warn',
-            {
-                callbacksLast: true,
             },
         ],
         'react/jsx-key': 'warn', // Warn if an element that likely requires a key prop
