@@ -21,11 +21,11 @@ jobs:
         # 14.x is recommended by https://nodejs.org/en/
         node-version: [10.x]
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
       - name: Set up node ${{ matrix.python-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "10.x"
 
       # See: https://github.com/actions/cache/blob/main/examples.md#node---yarn
       - name: Get Yarn cache directory
@@ -69,7 +69,7 @@ jobs:
       - name: Set up node ${{ matrix.python-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "10.x"
 
       # See: https://github.com/actions/cache/blob/main/examples.md#node---yarn
       - name: Get Yarn cache directory
