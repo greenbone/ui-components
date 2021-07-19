@@ -36,6 +36,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@babel/preset-env" : "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
     "@rollup/plugin-node-resolve": "^13.0.2",
     "@storybook/react": "^6.3.4",
     "@svgr/rollup": "^5.5.0",

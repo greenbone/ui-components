@@ -1,7 +1,6 @@
 import React from "react"
 import {render} from "@testing-library/react"
 import {ThemeProvider} from "styled-components"
-import {Flex} from "../src/components/library/flex"
 import {ColorTheme} from "../theme"
 
 
