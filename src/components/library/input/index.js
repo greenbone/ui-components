@@ -193,28 +193,24 @@ export function Input(props) {
     )
 }
 
-InnerInput.propTypes = {
+const propTypes = {
     adornment: PropTypes.node,
     type: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     value: PropTypes.any,
     isValid: PropTypes.any,
     label: PropTypes.string,
-    onChange: PropTypes.func,
     helperText: PropTypes.node,
     inputRef: PropTypes.any,
     readOnly: PropTypes.bool,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func
+}
+
+InnerInput.propTypes = {
+    ...propTypes
 }
 
 Input.propTypes = {
-    adornment: PropTypes.node,
-    type: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.any,
-    isValid: PropTypes.any,
-    label: PropTypes.string,
-    onChange: PropTypes.func,
-    helperText: PropTypes.node,
-    inputRef: PropTypes.any
+   ...propTypes
 }

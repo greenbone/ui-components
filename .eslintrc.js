@@ -183,6 +183,13 @@ module.exports = {
                 ignorePureComponents: true,
             },
         ],
+        'react/sort-prop-types': [
+            // warn if proptypes are not sorted
+            'warn',
+            {
+                callbacksLast: true,
+            },
+        ],
         'react/jsx-key': 'warn', // Warn if an element that likely requires a key prop
         'react/jsx-no-bind': [
             // No .bind() in JSX Props

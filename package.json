@@ -17,7 +17,8 @@
     "build-storybook": "build-storybook -c .storybook -o storybook",
     "storybook": "start-storybook -p 7000",
     "create-types": "tsc",
-    "lint": "eslint --max-warnings 0 src"
+    "lint": "eslint --max-warnings 0 src",
+    "lint-fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",
