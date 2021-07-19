@@ -2,14 +2,18 @@
   "name": "@greenbone/ui-components",
   "version": "2021.1.2",
   "description": "Greenbone Frontend Component Library",
-  "main": "build/library.js",
-  "types": "types/index.d.ts",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "files": [
+    "build"
+  ],
+  "types": "build/index.d.ts",
   "repository": "https://github.com/greenbone/ui-components",
   "scripts": {
     "test": "jest --watch",
     "test-ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "build": "rollup -c",
     "build-storybook": "build-storybook -c .storybook -o storybook",
     "storybook": "start-storybook -p 7000",
     "create-types": "tsc"
@@ -18,39 +22,49 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "peerDependencies": {
-    "prop-types": "^15",
-    "react": "^16",
-    "react-dom": "^16"
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "styled-components": "^5"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   },
   "dependencies": {
-    "styled-components": "^5",
     "@material-ui/core": "^4",
-    "bootstrap": "^4",
+    "bootstrap": "^5",
     "reactstrap": "^8"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "@babel/polyfill": "^7.12.1",
-    "@neutrinojs/jest": "^9.5.0",
-    "@neutrinojs/react-components": "^9.5.0",
-    "@storybook/addon-actions": "^6.3.4",
+    "@rollup/plugin-node-resolve": "^13.0.2",
     "@storybook/react": "^6.3.4",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/rollup": "^5.5.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
-    "core-js": "^3.15.2",
-    "jest": "^26.6.3",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.11",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
     "jest-junit": "^12.2.0",
-    "neutrino": "^9.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rollup": "^2.53.2",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs" : "^19.0.1",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "simple-icons": "^5.7.0",
+    "styled-components": "^5.1.1",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.5",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^5.2.0",
-    "storybook-react-router": "^1.0.8",
-    "typescript": "4.3.5",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
+    "@babel/plugin-transform-runtime" : "^7.14.5"
   }
 }

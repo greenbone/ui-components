@@ -1,3 +1,3 @@
-export const Flex: any;
-export const FlexRow: any;
-export const FlexColumn: any;
+export const Flex: import("styled-components").StyledComponent<"div", any, {}, never>;
+export const FlexRow: import("styled-components").StyledComponent<"div", any, {}, never>;
+export const FlexColumn: import("styled-components").StyledComponent<"div", any, {}, never>;

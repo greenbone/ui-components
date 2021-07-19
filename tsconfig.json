@@ -1,12 +1,13 @@
 {
   // Change this to match your project
   "include": [
-    "src/components/Library/**/*.js"
+    "src/components/library/**/*.js"
   ],
   "exclude": [
     "node_modules",
     "*.stories.js",
     "*.test.js",
+    "**/test/**",
     "*/story/**"
   ],
   "compilerOptions": {
