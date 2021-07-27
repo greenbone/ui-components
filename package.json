@@ -1,5 +1,5 @@
 {
-  "name": "@greenbone/ui-components",
+  "name": "@janwerremeyer/ui-components-test",
   "version": "2021.1.2",
   "description": "Greenbone Frontend Component Library",
   "main": "build/index.js",
