@@ -8,7 +8,7 @@
     "build"
   ],
   "types": "build/index.d.ts",
-  "repository": "https://github.com/greenbone/ui-components",
+  "repository": "https://github.com/janwerremeyer/ui-components",
   "scripts": {
     "test": "jest --watch",
     "test-ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
