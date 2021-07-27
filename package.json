@@ -68,6 +68,8 @@
     "simple-icons": "^5.8.0",
     "styled-components": "^5.1.1",
     "ts-jest": "^27.0.4",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "react": "^16",
+    "react-dom": "^16"
   }
 }
