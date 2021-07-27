@@ -2,7 +2,7 @@ name: Build and test JavaScript
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master,  rollup_example_typescript ]
   pull_request:
     branches: [ master ]
 
@@ -19,7 +19,7 @@ jobs:
         #          ubuntu lts: https://packages.ubuntu.com/focal/nodejs
         # 12.x for ubuntu-latest: https://packages.ubuntu.com/hirsute/nodejs
         # 14.x is recommended by https://nodejs.org/en/
-        node-version: [14.x]
+        node-version: [ 14.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Set up node ${{ matrix.python-version }}
@@ -63,7 +63,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [ 14.x ]
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Set up node ${{ matrix.python-version }}
