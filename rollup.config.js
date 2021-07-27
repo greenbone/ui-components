@@ -1,15 +1,16 @@
 import peerDepsExternal from "rollup-plugin-peer-deps-external"
 import resolve from "@rollup/plugin-node-resolve"
+import typescript from "@rollup/plugin-typescript"
 import commonjs from "@rollup/plugin-commonjs"
-import babel from '@rollup/plugin-babel';
+import dts from "rollup-plugin-dts";
 
 const svgr = require("@svgr/rollup").default
+
 
 const packageJson = require("./package.json")
 
 export default {
-    input: "src/components/library/index.js",
-    external: id => id.includes('@babel/runtime'),
+    input: "src/index.ts",
     output: [
         {
             file: packageJson.main,
@@ -20,17 +21,15 @@ export default {
             file: packageJson.module,
             format: "esm",
             sourcemap: true
-        }
+        },
+      //  { file: packageJson.types, format: "es" }
     ],
     plugins: [
         peerDepsExternal(),
         resolve(),
-        babel({
-            plugins: ["@babel/plugin-transform-runtime"],
-            presets: ["@babel/preset-react"],
-            babelHelpers: 'runtime'
-        }),
         commonjs(),
         svgr({typescript: false}),
+        typescript(),
+        //dts()
     ]
 }
