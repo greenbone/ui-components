@@ -16,7 +16,8 @@
     "baseUrl": "src",
     "paths": {
       "@test-utils/*" : ["utils/*"]
-    }
+    },
+    "typeRoots": ["./src/types.ts", "node_modules/@types"]
   },
   "include": ["src/**/*"],
   "exclude": [
