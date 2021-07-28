@@ -99,7 +99,7 @@
     },
     building: {
       env: { REPORT_DIR: "reports" },
-      name: "Run eslint",
+      name: "Run build",
       runs-on: "ubuntu-latest",
       steps: [
         {
@@ -133,9 +133,54 @@
           run: "yarn install --prefer-offline"
         },
         {
-          name: "Run eslint",
+          name: "Run build",
           run: "yarn run build"
         }
+      ]
+    },
+    publish: {
+      env: { REPORT_DIR: "reports" },
+      name: "Publish library",
+      runs-on: "ubuntu-latest",
+      steps: [
+        {
+          uses: "actions/checkout@v2"
+        },
+        {
+          name: "Set up node ${{ matrix.python-version }}",
+          uses: "actions/setup-node@v2",
+          with: {
+            "node-version": "14.x"
+          }
+        },
+        {
+          name: "Get Yarn cache directory",
+          id: "yarn-cache-dir-path",
+          run: "echo \"::set-output name=dir::$(yarn cache dir)\""
+        },
+        {
+          name: "Use Yarn cache",
+          uses: "actions/cache@v2",
+          id: "yarn-cache",
+          with:
+            {
+              path: "${{ steps.yarn-cache-dir-path.outputs.dir }}",
+              key: "${{ runner.os }}-yarn-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}"
+            }
+
+        },
+        {
+          name: "Install dependencies",
+          run: "yarn install --prefer-offline"
+        },
+        {
+          name: "Run build",
+          run: "yarn run build"
+        },
+        {
+          name: "Run publish",
+          run: "npm run publish"
+        },
       ]
     }
   },
