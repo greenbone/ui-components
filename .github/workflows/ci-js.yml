@@ -50,7 +50,7 @@
           name: Run JavaScript tests,
           env:
             {
-              JEST_JUNIT_OUTPUT_DIR: ${ { github.WORKSPACE } }/${ { env.REPORT_DIR } }
+              JEST_JUNIT_OUTPUT_DIR: "${{ github.WORKSPACE }}/${{ env.REPORT_DIR }}"
             },
           run: yarn run test-ci
         }
