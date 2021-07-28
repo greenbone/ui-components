@@ -169,13 +169,6 @@ module.exports = {
             'error',
             'never',
         ],
-        'react/prop-types': [
-            // warn if not proptypes are defined for a component
-            'warn',
-            {
-                ignore: ['children', 'className', 'location', 'params'],
-            },
-        ],
         'react/prefer-es6-class': 'warn', // prefer ES6 class over React.createReactClass
         'react/prefer-stateless-function': [
             'warn',
