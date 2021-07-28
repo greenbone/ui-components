@@ -12,7 +12,11 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "downlevelIteration": true,
-    "declarationDir": "dist/dts"
+    "declarationDir": "dist/dts",
+    "baseUrl": "src",
+    "paths": {
+      "@test-utils/*" : ["utils/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": [

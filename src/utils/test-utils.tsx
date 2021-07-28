@@ -1,16 +1,16 @@
-import React from "react"
+import * as React from "react"
 import {render} from "@testing-library/react"
 import {ThemeProvider} from "styled-components"
-import {ColorTheme} from "../theme"
+import {ColorTheme} from "../Theme"
 
 
-const AllTheProviders = ({children}) => (
+const AllTheProviders = ({children} : any) => (
     <ThemeProvider theme={ColorTheme}>
         {children}
     </ThemeProvider>
 )
 
-const customRender = (ui, options) =>
+const customRender = (ui : any, options? : any) =>
     render(ui, {wrapper: AllTheProviders, ...options})
 
 // re-export everything

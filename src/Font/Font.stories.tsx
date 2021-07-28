@@ -2,11 +2,11 @@ import React from "react";
 import {
     Caption as CaptionComponent,
     Headline as HeadlineComponent,
-    Paragraph as PragraphComponent,
+    Paragraph as ParagraphComponent,
     Subheadline as SubheadlineComponent,
     Text as TextComponent,
     Tiny as TinyComponent
-} from "./index";
+} from "./Font";
 
 
 export default {title: "Font"};
@@ -17,4 +17,4 @@ export const Subheadline = () => <SubheadlineComponent>Subheadline</SubheadlineC
 export const Caption = () => <CaptionComponent>Caption</CaptionComponent>;
 export const Text = () => <TextComponent>Text</TextComponent>;
 export const Tiny = () => <TinyComponent>Tiny</TinyComponent>;
-export const Paragraph = () => <PragraphComponent>Paragraph</PragraphComponent>;
+export const Paragraph = () => <ParagraphComponent>Paragraph</ParagraphComponent>;

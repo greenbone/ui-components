@@ -1,7 +1,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import {Flex, FlexColumn} from "../index";
+import {Flex, FlexColumn} from "./Flex";
 
 
 const Dot = styled.div`

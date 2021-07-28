@@ -1,7 +1,8 @@
 import styled, {css} from "styled-components"
+import {TFontProps} from "./Font.types"
 
 
-const Font = styled.div`
+const Font = styled.div<TFontProps>`
   margin: 0;
   margin-bottom: 0.94rem;
   font-weight: normal;
@@ -19,42 +20,41 @@ const Font = styled.div`
   ${props => props.noWrap && "white-space: nowrap"};
 `
 
-export const Headline = styled(Font.withComponent("h1"))`
+export const Headline = styled(Font.withComponent("h1"))<TFontProps>`
   font-size: 2rem;
   font-family: DroidSans, sans-serif;
   color: ${props => props.theme.font.headline};
   font-weight: normal;
-  font-weight: normal;
 `
 
-export const Subheadline = styled(Font.withComponent("h2"))`
+export const Subheadline = styled(Font.withComponent("h2"))<TFontProps>`
   font-size: 1.63rem;
   font-family: DroidSans, sans-serif;
   color: ${props => props.theme.font.subheadline};
   font-weight: normal;
 `
 
-export const Caption = styled(Font.withComponent("h3"))`
+export const Caption = styled(Font.withComponent("h3"))<TFontProps>`
   font-size: 1.25rem;
   font-family: DroidSans, sans-serif;
   color: ${props => props.theme.font.caption};
   font-weight: normal;
 `
 
-export const Text = styled(Font.withComponent("span"))`
+export const Text = styled(Font.withComponent("span"))<TFontProps>`
   color: ${props => props.theme.font.text};
   font-size: 1rem;
   margin: 0;
 `
 
 
-export const Bold = styled(Font.withComponent("strong"))`
+export const Bold = styled(Font.withComponent("strong"))<TFontProps>`
   font-size: 1rem;
   color: ${props => props.theme.font.text};
   font-weight: bold;
 `
 
-export const Paragraph = styled(Font.withComponent("p"))`
+export const Paragraph = styled(Font.withComponent("p"))<TFontProps & {size?: string, legacy?: boolean}>`
   color: ${props => props.theme.font.text};
   
   ${({size}) => size && css`
@@ -68,7 +68,7 @@ export const Paragraph = styled(Font.withComponent("p"))`
 `
 
 
-export const Tiny = styled(Font.withComponent("span"))`
+export const Tiny = styled(Font.withComponent("span"))<TFontProps>`
   color: ${props => props.theme.font.tiny};
   margin: 0;
   font-size: 0.75rem;
