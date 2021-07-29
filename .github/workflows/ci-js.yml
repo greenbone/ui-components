@@ -180,6 +180,7 @@
         },
         {
           name: "Run publish",
+          if: "github.ref == 'refs/heads/master'",
           run: "npm publish",
           env: {
             NODE_AUTH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
