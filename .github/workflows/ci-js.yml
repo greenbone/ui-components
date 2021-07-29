@@ -3,7 +3,7 @@
 
   on: {
     push: {
-      branches: [ "master", "rollup_example_typescript" ]
+      branches: [ "master" ]
     },
     "pull_request": {
       branches: [ "master" ]
