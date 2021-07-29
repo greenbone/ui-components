@@ -2,7 +2,6 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external"
 import resolve from "@rollup/plugin-node-resolve"
 import typescript from "@rollup/plugin-typescript"
 import commonjs from "@rollup/plugin-commonjs"
-import dts from "rollup-plugin-dts";
 
 const svgr = require("@svgr/rollup").default
 
@@ -29,7 +28,6 @@ export default {
         resolve(),
         commonjs(),
         svgr({typescript: false}),
-        typescript(),
-        //dts()
+        typescript({ tsconfig: './tsconfig.json' }),
     ]
 }
