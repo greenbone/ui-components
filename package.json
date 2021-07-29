@@ -1,6 +1,6 @@
 {
   "name": "@janwerremeyer/ui-components-test",
-  "version": "2021.1.2",
+  "version": "2021.07.01",
   "description": "Greenbone Frontend Component Library",
   "main": "build/index.js",
   "module": "build/index.esm.js",
