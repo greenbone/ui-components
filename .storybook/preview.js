@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import React from "react"
-import {ColorTheme} from "../Theme"
+import {ColorTheme} from "../theme"
 
 export const decorators = [
     (Story) => (
