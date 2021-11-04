@@ -36,7 +36,7 @@
   "dependencies": {
     "@material-ui/core": "^4",
     "bootstrap": "^5",
-    "reactstrap": "^8"
+    "reactstrap": "^9"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
