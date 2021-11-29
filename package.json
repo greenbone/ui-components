@@ -70,7 +70,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-typescript2": "^0.31.0",
-    "sass": "^1.43.4",
+    "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "simple-icons": "^6.0.0",
     "styled-components": "^5.3.3",
