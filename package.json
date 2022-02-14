@@ -62,7 +62,7 @@
     "babel-preset-react-app": "^10.0.0",
     "html-webpack-plugin": "5.5.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.0",
+    "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
     "rollup": "^2.67.2",
     "rollup-plugin-copy": "^3.3.0",
