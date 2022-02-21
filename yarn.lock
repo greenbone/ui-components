@@ -11377,10 +11377,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-icons@^6.10.0:
-  version "6.10.0"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-6.10.0.tgz#4a4b5bfdb8474d881f5a69102b84613092406f9b"
-  integrity sha512-ttZNI13dH3vHII0/qWwXH1ipSZd5zX9eMh0kMTi8c2V32ON/IFl8fNL9k4MaP5lGy5KpEAchfRZ5NeMynpWRjg==
+simple-icons@^6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-6.11.0.tgz#c3bf59de4172176d8be74793a987a6b81ce83f2e"
+  integrity sha512-z1OMDOA84AUcL3N+SMWloFPh9FQVUpFSROS5noaPrMKF/iuMlxySE8jEO35E1K295vX8qWPmEJzdXhGaI7KZJA==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
