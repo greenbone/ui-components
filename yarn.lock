@@ -2684,10 +2684,10 @@
     lz-string "^1.4.4"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^5.16.2":
-  version "5.16.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.16.2.tgz#f329b36b44aa6149cd6ced9adf567f8b6aa1c959"
-  integrity sha512-6ewxs1MXWwsBFZXIk4nKKskWANelkdUehchEOokHsN8X7c2eKXGw+77aRV63UU8f/DTSVUPLaGxdrj4lN7D/ug==
+"@testing-library/jest-dom@^5.16.3":
+  version "5.16.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.16.3.tgz#b76851a909586113c20486f1679ffb4d8ec27bfa"
+  integrity sha512-u5DfKj4wfSt6akfndfu1eG06jsdyA/IUrlX2n3pyq5UXgXMhXY+NJb8eNK/7pqPWAhCKsCGWDdDO0zKMKAYkEA==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -11355,10 +11355,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-icons@^6.15.0:
-  version "6.15.0"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-6.15.0.tgz#2a7e7f8d8a3e5c2f430fba364db1f0fe1520abb9"
-  integrity sha512-/JxA/vKsDiHrY16FZF1qJXdSrMqGR8knkmMex/8oJ8P3vv3sj2zxs/6Ky8tiGGgFonG8XUSCNeb3RACgGVMemQ==
+simple-icons@^6.16.0:
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-6.16.0.tgz#1f98839215a9578af701fe3810bf7eb57d2c5ac8"
+  integrity sha512-CCZ8xUgTJa+aJtj8+qBmMkWRJyv/0xinBA9Ypbq65pyz5tWmeA7n9IGtQIOqb7rOxJNxPuo9ddn4vFcRQZIFlQ==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
