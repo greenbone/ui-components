@@ -57,7 +57,7 @@
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
-    "@types/styled-components": "^5.1.24",
+    "@types/styled-components": "^5.1.25",
     "babel-loader": "^8.2.3",
     "babel-preset-react-app": "^10.0.0",
     "html-webpack-plugin": "5.5.0",
