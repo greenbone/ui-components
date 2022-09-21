@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "@babel/core": "^7.19.1",
     "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
     "@storybook/react": "^6.4.22",
     "@svgr/rollup": "^5.5.0",
