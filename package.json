@@ -72,7 +72,7 @@
     "rollup-plugin-typescript2": "^0.34.0",
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
-    "simple-icons": "^7.11.0",
+    "simple-icons": "^7.13.0",
     "styled-components": "^5.3.5",
     "ts-jest": "^27.1.4",
     "typescript": "^4.8.3",
