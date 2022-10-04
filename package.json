@@ -64,7 +64,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-junit": "^14.0.1",
-    "rollup": "^2.79.0",
+    "rollup": "^2.79.1",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-peer-deps-external": "^2.2.0",
