@@ -49,7 +49,7 @@
     "@babel/core": "^7.19.6",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@rollup/plugin-typescript": "^8.5.0",
+    "@rollup/plugin-typescript": "^9.0.2",
     "@storybook/react": "^6.4.22",
     "@svgr/rollup": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
